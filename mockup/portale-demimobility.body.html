@@ -1,0 +1,448 @@
+<title>Portale DemiMobility</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap">
+<style>
+/* Layout: barra scura con il marchio DemiMobility, hero con ricerca offerte, griglia veicoli, servizi inclusi, passaggi, richiesta preventivo, footer scuro. */
+:root {
+  --rosa: #DFB3A7;          /* colore del simbolo DemiMobility */
+  --rosa-scuro: #A8705F;    /* rosa per testo e link su fondo chiaro */
+  --rosa-tenue: #F6E9E5;
+  --notte: #241E1D;         /* fondo di header e footer (il marchio è bianco) */
+  --notte-2: #2F2826;
+  --bg: #FBF9F8;
+  --surface: #FFFFFF;
+  --fg: #2A2321;
+  --muted: #74685F;
+  --line: #EADFDB;
+  --ok: #3E7C5A;
+  --font-display: "Quicksand", "Nunito Sans", system-ui, sans-serif;
+  --font-body: "Nunito Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius: 14px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --rosa-scuro: #E6BDB1; --rosa-tenue: #3A2E2B;
+    --bg: #181413; --surface: #221C1B; --fg: #F3ECE9; --muted: #B4A69F; --line: #3A3130; --ok: #7DC39C;
+    --notte: #110E0D; --notte-2: #1C1716;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --rosa-scuro: #E6BDB1; --rosa-tenue: #3A2E2B;
+  --bg: #181413; --surface: #221C1B; --fg: #F3ECE9; --muted: #B4A69F; --line: #3A3130; --ok: #7DC39C;
+  --notte: #110E0D; --notte-2: #1C1716;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font: 16px/1.55 var(--font-body); margin: 0; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.15; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--rosa); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; }
+
+.mock-note { background: var(--rosa); color: #2A2321; font-size: 13px; text-align: center; padding: 6px 16px; font-weight: 600; }
+
+/* Header */
+.top { background: var(--notte); color: #fff; position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; }
+.top .wrap { display: flex; align-items: center; gap: 28px; min-height: 76px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand svg { height: 44px; width: auto; flex: none; }
+.brand-text { display: flex; flex-direction: column; line-height: 1; }
+.brand-name { font-family: var(--font-display); font-weight: 700; font-size: 26px; letter-spacing: -.01em; color: #fff; }
+.brand-tag { font-family: var(--font-display); font-weight: 500; font-size: 11.5px; letter-spacing: .14em; color: #E9DCD8; margin-top: 5px; }
+.nav { display: flex; gap: 22px; margin-left: auto; flex-wrap: wrap; }
+.nav a { white-space: nowrap; text-decoration: none; font-weight: 600; font-size: 15px; color: #E9DCD8; padding-block: 6px; border-bottom: 2px solid transparent; }
+.nav a:hover, .nav a[aria-current] { color: #fff; border-bottom-color: var(--rosa); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: 700 15px var(--font-body); border-radius: 999px; padding: 11px 22px; border: 0; cursor: pointer; text-decoration: none; }
+.btn-rosa { background: var(--rosa); color: #2A2321; }
+.btn-rosa:hover { background: #E8C3B8; }
+.btn-ghost { background: transparent; color: #fff; border: 1.5px solid #6A5B57; }
+.btn-ghost:hover { border-color: var(--rosa); }
+
+/* Hero */
+.hero { background: linear-gradient(180deg, var(--notte) 0%, var(--notte-2) 100%); color: #fff; padding-block: 56px 72px; overflow: hidden; }
+.hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+.eyebrow { font: 700 12px var(--font-body); letter-spacing: .16em; text-transform: uppercase; color: var(--rosa); }
+.hero h1 { font-size: clamp(34px, 5vw, 54px); font-weight: 700; margin-top: 14px; }
+.hero h1 em { font-style: normal; color: var(--rosa); }
+.hero p.lead { color: #DCCFCB; font-size: 18px; max-width: 34em; margin: 18px 0 28px; }
+.search { background: var(--surface); color: var(--fg); border-radius: var(--radius); padding: 18px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-items: end; box-shadow: 0 20px 50px rgba(0,0,0,.25); }
+.field { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.field label { font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: .04em; }
+.field select, .field input, .field textarea { font: 15px var(--font-body); color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; width: 100%; }
+.hero-car { position: relative; padding-bottom: 70px; }
+.search .btn { grid-column: 1 / -1; }
+.hero-car .disc { position: absolute; inset: 8% 6% auto auto; width: 78%; aspect-ratio: 1; border-radius: 50%; border: 44px solid rgba(223,179,167,.14); max-width: 100%; }
+.hero-car svg.car { position: relative; width: 100%; height: auto; }
+.hero-price { position: absolute; left: 8%; bottom: 0; background: var(--surface); color: var(--fg); border-radius: 12px; padding: 12px 16px; box-shadow: 0 12px 30px rgba(0,0,0,.3); }
+.hero-price small { display: block; color: var(--muted); font-size: 12px; }
+.hero-price strong { font: 700 26px var(--font-display); font-variant-numeric: tabular-nums; }
+.hero-price strong span { font-size: 14px; color: var(--muted); font-weight: 600; }
+
+/* Sections */
+section.block { padding-block: 72px; }
+.head { display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; margin-bottom: 28px; }
+.head h2 { font-size: clamp(26px, 3.4vw, 36px); }
+.head p { color: var(--muted); margin: 8px 0 0; max-width: 40em; }
+.tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+.tab { font: 600 14px var(--font-body); padding: 8px 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); cursor: pointer; }
+.tab[aria-pressed="true"] { background: var(--notte); color: #fff; border-color: var(--notte); }
+
+/* Offerte */
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.offer { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+.offer .pic { background: var(--rosa-tenue); padding: 18px 18px 6px; position: relative; }
+.offer .pic svg { width: 100%; height: auto; display: block; }
+.badge { position: absolute; top: 14px; left: 14px; font: 700 11px var(--font-body); letter-spacing: .08em; text-transform: uppercase; background: var(--notte); color: #fff; padding: 5px 10px; border-radius: 999px; }
+.offer .body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+.offer h3 { font-size: 20px; }
+.offer .ver { color: var(--muted); font-size: 14px; margin-top: 2px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12.5px; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); color: var(--muted); }
+.terms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; border-block: 1px solid var(--line); padding-block: 12px; font-variant-numeric: tabular-nums; }
+.terms dt { font-size: 11.5px; color: var(--muted); font-weight: 700; letter-spacing: .04em; }
+.terms dd { margin: 2px 0 0; font-weight: 700; }
+.price-row { display: flex; align-items: end; justify-content: space-between; gap: 12px; margin-top: auto; }
+.price { font: 700 30px var(--font-display); font-variant-numeric: tabular-nums; line-height: 1; }
+.price small { font: 600 13px var(--font-body); color: var(--muted); }
+.price .iva { display: block; font: 600 12px var(--font-body); color: var(--muted); margin-top: 4px; }
+.btn-dark { background: var(--notte); color: #fff; padding: 10px 18px; font-size: 14px; }
+.btn-dark:hover { background: var(--rosa-scuro); color: #fff; }
+
+/* Incluso */
+.incluso { background: var(--surface); border-block: 1px solid var(--line); }
+.inc-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 24px; }
+.inc { display: flex; gap: 14px; align-items: flex-start; }
+.inc .ico { flex: none; width: 44px; height: 44px; border-radius: 12px; background: var(--rosa-tenue); display: grid; place-items: center; color: var(--rosa-scuro); }
+.inc h3 { font-size: 17px; }
+.inc p { margin: 4px 0 0; color: var(--muted); font-size: 14.5px; }
+
+/* Passaggi */
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; counter-reset: s; list-style: none; padding: 0; margin: 0; }
+.steps li { counter-increment: s; border-top: 3px solid var(--rosa); padding-top: 16px; }
+.steps li::before { content: "Passo " counter(s); display: block; font: 700 12px var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--rosa-scuro); margin-bottom: 8px; }
+.steps h3 { font-size: 19px; }
+.steps p { color: var(--muted); margin: 6px 0 0; font-size: 15px; }
+
+/* Preventivo */
+.quote { background: var(--notte); color: #fff; border-radius: 22px; padding: 44px; display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px; }
+.quote h2 { font-size: clamp(26px, 3.4vw, 36px); }
+.quote p { color: #DCCFCB; }
+.contact-line { display: flex; flex-direction: column; gap: 6px; margin-top: 22px; font-weight: 600; }
+.contact-line span { color: var(--rosa); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+.form { background: var(--surface); color: var(--fg); border-radius: var(--radius); padding: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form .full { grid-column: 1 / -1; }
+.seg { display: flex; gap: 8px; flex-wrap: wrap; }
+.seg label { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--fg); padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; cursor: pointer; }
+.seg input { accent-color: var(--rosa-scuro); }
+.privacy { font-size: 13px; color: var(--muted); display: flex; gap: 8px; align-items: flex-start; }
+.privacy input { accent-color: var(--rosa-scuro); margin-top: 3px; }
+.sent { grid-column: 1 / -1; background: var(--rosa-tenue); color: var(--fg); border-radius: 10px; padding: 12px 14px; font-weight: 600; }
+
+/* Footer */
+footer { background: var(--notte); color: #CDBFBA; margin-top: 72px; padding-block: 48px 28px; font-size: 14.5px; }
+.foot { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; }
+footer h4 { color: #fff; font: 700 14px var(--font-display); margin: 0 0 12px; letter-spacing: .04em; }
+footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+footer a { text-decoration: none; }
+footer a:hover { color: var(--rosa); }
+.legal { border-top: 1px solid #3E3533; margin-top: 36px; padding-top: 18px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 13px; color: #9E8F8A; }
+
+@media (max-width: 980px) {
+  .hero .wrap, .quote { grid-template-columns: 1fr; }
+  .top { position: static; }
+  .top .wrap { gap: 12px 20px; padding-block: 12px; }
+  .hero-car { max-width: 520px; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .inc-grid, .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .foot { grid-template-columns: 1fr 1fr; }
+  .nav { order: 3; width: 100%; margin-left: 0; gap: 16px; overflow-x: auto; padding-bottom: 8px; flex-wrap: nowrap; }
+  .top .actions { margin-left: auto; }
+}
+@media (max-width: 620px) {
+  .grid, .inc-grid, .steps, .form, .foot { grid-template-columns: 1fr; }
+  .search { grid-template-columns: 1fr; }
+  .quote { padding: 26px 20px; }
+  .brand-name { font-size: 22px; }
+  .top .actions .btn-ghost { display: none; }
+  .hero-price strong { font-size: 22px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .offer { transition: transform .2s ease, box-shadow .2s ease; }
+  .offer:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(36,30,29,.12); }
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Simbolo DemiMobility (dal logo fornito), ridisegnato in vettoriale -->
+    <symbol id="simbolo" viewBox="0 0 295 410">
+      <rect x="0" y="0" width="295" height="55" rx="3" fill="#DFB3A7"/>
+      <path d="M0 58 A146 146 0 0 1 0 350 L0 298 A94 94 0 0 0 0 110 Z" fill="#DFB3A7"/>
+      <path d="M295 58 A146 146 0 0 0 295 350 L295 298 A94 94 0 0 1 295 110 Z" fill="#DFB3A7"/>
+      <rect x="0" y="355" width="295" height="55" rx="3" fill="#DFB3A7"/>
+    </symbol>
+    <!-- Sagome auto -->
+    <symbol id="suv" viewBox="0 0 400 170">
+      <ellipse cx="200" cy="158" rx="170" ry="8" fill="#000" opacity=".12"/>
+      <path d="M28 120 L30 92 Q34 78 52 74 L108 66 L150 34 Q160 28 176 28 L282 28 Q298 28 308 38 L338 70 L362 76 Q378 80 378 96 L378 120 Q378 130 368 130 L32 130 Q28 130 28 120 Z" fill="currentColor"/>
+      <path d="M160 40 L176 38 L222 38 L222 68 L126 70 Z M232 38 L280 38 Q290 38 296 44 L322 70 L232 68 Z" fill="#fff" opacity=".55"/>
+      <circle cx="104" cy="130" r="27" fill="#2A2321"/><circle cx="104" cy="130" r="12" fill="#CFC6C2"/>
+      <circle cx="304" cy="130" r="27" fill="#2A2321"/><circle cx="304" cy="130" r="12" fill="#CFC6C2"/>
+      <rect x="352" y="86" width="22" height="8" rx="4" fill="#FCE8C8"/>
+    </symbol>
+    <symbol id="berlina" viewBox="0 0 400 170">
+      <ellipse cx="200" cy="158" rx="172" ry="8" fill="#000" opacity=".12"/>
+      <path d="M22 118 L24 100 Q28 88 46 84 L118 74 L166 46 Q178 40 194 40 L262 40 Q278 40 290 50 L326 78 L362 84 Q380 88 380 104 L380 120 Q380 130 370 130 L30 130 Q22 130 22 118 Z" fill="currentColor"/>
+      <path d="M176 52 L196 50 L232 50 L232 76 L138 78 Z M242 50 L262 50 Q274 50 282 56 L310 78 L242 76 Z" fill="#fff" opacity=".55"/>
+      <circle cx="100" cy="130" r="25" fill="#2A2321"/><circle cx="100" cy="130" r="11" fill="#CFC6C2"/>
+      <circle cx="308" cy="130" r="25" fill="#2A2321"/><circle cx="308" cy="130" r="11" fill="#CFC6C2"/>
+      <rect x="356" y="94" width="20" height="7" rx="3.5" fill="#FCE8C8"/>
+    </symbol>
+    <symbol id="citycar" viewBox="0 0 400 170">
+      <ellipse cx="200" cy="158" rx="150" ry="8" fill="#000" opacity=".12"/>
+      <path d="M56 120 L58 96 Q62 84 78 80 L118 74 L150 40 Q160 32 176 32 L252 32 Q268 32 278 42 L310 76 L332 82 Q346 86 346 100 L346 120 Q346 130 336 130 L64 130 Q56 130 56 120 Z" fill="currentColor"/>
+      <path d="M160 44 L176 42 L210 42 L210 74 L130 76 Z M220 42 L250 42 Q262 42 270 50 L294 74 L220 74 Z" fill="#fff" opacity=".55"/>
+      <circle cx="124" cy="130" r="24" fill="#2A2321"/><circle cx="124" cy="130" r="10" fill="#CFC6C2"/>
+      <circle cx="286" cy="130" r="24" fill="#2A2321"/><circle cx="286" cy="130" r="10" fill="#CFC6C2"/>
+      <rect x="322" y="92" width="18" height="7" rx="3.5" fill="#FCE8C8"/>
+    </symbol>
+    <symbol id="furgone" viewBox="0 0 400 170">
+      <ellipse cx="200" cy="158" rx="172" ry="8" fill="#000" opacity=".12"/>
+      <path d="M24 120 L24 30 Q24 18 36 18 L262 18 Q276 18 286 28 L338 72 L364 78 Q380 82 380 98 L380 120 Q380 130 370 130 L32 130 Q24 130 24 120 Z" fill="currentColor"/>
+      <path d="M262 30 Q272 30 280 38 L322 72 L262 72 Z" fill="#fff" opacity=".55"/>
+      <line x1="250" y1="22" x2="250" y2="126" stroke="#000" stroke-opacity=".15" stroke-width="2"/>
+      <circle cx="92" cy="130" r="25" fill="#2A2321"/><circle cx="92" cy="130" r="11" fill="#CFC6C2"/>
+      <circle cx="308" cy="130" r="25" fill="#2A2321"/><circle cx="308" cy="130" r="11" fill="#CFC6C2"/>
+      <rect x="356" y="90" width="20" height="8" rx="4" fill="#FCE8C8"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="mock-note">Mockup grafico · i veicoli, i prezzi e i contatti sono esempi</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="DemiMobility, home">
+      <svg viewBox="0 0 295 410" aria-hidden="true"><use href="#simbolo"/></svg>
+      <span class="brand-text">
+        <span class="brand-name">DemiMobility</span>
+        <span class="brand-tag">Noleggio a lungo termine</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Menu principale">
+      <a href="#offerte" aria-current="page">Offerte</a>
+      <a href="#privati">Privati</a>
+      <a href="#aziende">Aziende e P.IVA</a>
+      <a href="#come-funziona">Come funziona</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+    <div class="actions" style="display:flex;gap:10px">
+      <a class="btn btn-ghost" href="#">Area riservata</a>
+      <a class="btn btn-rosa" href="#contatti">Preventivo</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Noleggio a lungo termine per privati e aziende</div>
+      <h1>Un canone fisso al mese, <em>tutto incluso</em>.</h1>
+      <p class="lead">Scegli auto o veicolo commerciale, la durata e i chilometri. Assicurazione, manutenzione e bollo sono già nel canone.</p>
+      <form class="search" id="cerca" onsubmit="event.preventDefault(); document.getElementById('offerte').scrollIntoView({behavior:'smooth'})">
+        <div class="field"><label for="s-tipo">Cliente</label>
+          <select id="s-tipo"><option>Privato</option><option>Partita IVA</option><option>Azienda</option></select></div>
+        <div class="field"><label for="s-alim">Alimentazione</label>
+          <select id="s-alim"><option>Tutte</option><option>Ibrida</option><option>Elettrica</option><option>Benzina</option><option>Diesel</option></select></div>
+        <div class="field"><label for="s-durata">Durata</label>
+          <select id="s-durata"><option>36 mesi</option><option>24 mesi</option><option>48 mesi</option><option>60 mesi</option></select></div>
+        <div class="field"><label for="s-canone">Canone max</label>
+          <select id="s-canone"><option>400 €/mese</option><option>300 €/mese</option><option>500 €/mese</option><option>Nessun limite</option></select></div>
+        <button class="btn btn-rosa" type="submit">Cerca offerte</button>
+      </form>
+    </div>
+    <div class="hero-car">
+      <div class="disc"></div>
+      <svg class="car" viewBox="0 0 400 170" style="color:#DFB3A7" aria-hidden="true"><use href="#suv"/></svg>
+      <div class="hero-price">
+        <small>Offerta del mese · SUV ibrido</small>
+        <strong>349 € <span>/mese IVA incl.</span></strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="offerte">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <h2>Offerte in evidenza</h2>
+        <p>Canoni per 36 mesi e 15.000 km l'anno. Puoi cambiare durata e chilometraggio nel preventivo.</p>
+      </div>
+      <div class="tabs" role="group" aria-label="Filtra per categoria">
+        <button class="tab" type="button" aria-pressed="true" data-f="tutte">Tutte</button>
+        <button class="tab" type="button" aria-pressed="false" data-f="auto">Auto</button>
+        <button class="tab" type="button" aria-pressed="false" data-f="elettrica">Elettriche</button>
+        <button class="tab" type="button" aria-pressed="false" data-f="commerciale">Commerciali</button>
+      </div>
+    </div>
+
+    <div class="grid" id="offer-grid">
+      <article class="offer" data-cat="auto">
+        <div class="pic"><span class="badge">Pronta consegna</span><svg viewBox="0 0 400 170" style="color:#5B6670" aria-hidden="true"><use href="#suv"/></svg></div>
+        <div class="body">
+          <div><h3>Toyota C-HR</h3><div class="ver">1.8 Hybrid Trend · automatico</div></div>
+          <div class="chips"><span class="chip">Ibrida</span><span class="chip">SUV</span><span class="chip">140 CV</span></div>
+          <dl class="terms"><div><dt>Anticipo</dt><dd>2.500 €</dd></div><div><dt>Durata</dt><dd>36 mesi</dd></div><div><dt>Km/anno</dt><dd>15.000</dd></div></dl>
+          <div class="price-row"><div class="price">349 €<small>/mese</small><span class="iva">IVA inclusa</span></div><a class="btn btn-dark" href="#contatti">Dettagli</a></div>
+        </div>
+      </article>
+
+      <article class="offer" data-cat="auto">
+        <div class="pic"><svg viewBox="0 0 400 170" style="color:#B8BEC4" aria-hidden="true"><use href="#citycar"/></svg></div>
+        <div class="body">
+          <div><h3>Fiat Pandina</h3><div class="ver">1.0 Hybrid 70 CV · manuale</div></div>
+          <div class="chips"><span class="chip">Ibrida</span><span class="chip">City car</span><span class="chip">Neopatentati</span></div>
+          <dl class="terms"><div><dt>Anticipo</dt><dd>1.500 €</dd></div><div><dt>Durata</dt><dd>36 mesi</dd></div><div><dt>Km/anno</dt><dd>10.000</dd></div></dl>
+          <div class="price-row"><div class="price">219 €<small>/mese</small><span class="iva">IVA inclusa</span></div><a class="btn btn-dark" href="#contatti">Dettagli</a></div>
+        </div>
+      </article>
+
+      <article class="offer" data-cat="elettrica">
+        <div class="pic"><span class="badge">Zero emissioni</span><svg viewBox="0 0 400 170" style="color:#3F5568" aria-hidden="true"><use href="#berlina"/></svg></div>
+        <div class="body">
+          <div><h3>Tesla Model 3</h3><div class="ver">RWD · autonomia 513 km WLTP</div></div>
+          <div class="chips"><span class="chip">Elettrica</span><span class="chip">Berlina</span><span class="chip">Wallbox inclusa</span></div>
+          <dl class="terms"><div><dt>Anticipo</dt><dd>4.000 €</dd></div><div><dt>Durata</dt><dd>48 mesi</dd></div><div><dt>Km/anno</dt><dd>20.000</dd></div></dl>
+          <div class="price-row"><div class="price">489 €<small>/mese</small><span class="iva">IVA inclusa</span></div><a class="btn btn-dark" href="#contatti">Dettagli</a></div>
+        </div>
+      </article>
+
+      <article class="offer" data-cat="auto">
+        <div class="pic"><svg viewBox="0 0 400 170" style="color:#7A2E2A" aria-hidden="true"><use href="#suv"/></svg></div>
+        <div class="body">
+          <div><h3>Peugeot 2008</h3><div class="ver">Hybrid 136 e-DCS6 · Allure</div></div>
+          <div class="chips"><span class="chip">Ibrida</span><span class="chip">SUV compatto</span><span class="chip">136 CV</span></div>
+          <dl class="terms"><div><dt>Anticipo</dt><dd>3.000 €</dd></div><div><dt>Durata</dt><dd>36 mesi</dd></div><div><dt>Km/anno</dt><dd>15.000</dd></div></dl>
+          <div class="price-row"><div class="price">329 €<small>/mese</small><span class="iva">IVA inclusa</span></div><a class="btn btn-dark" href="#contatti">Dettagli</a></div>
+        </div>
+      </article>
+
+      <article class="offer" data-cat="commerciale">
+        <div class="pic"><span class="badge">P.IVA</span><svg viewBox="0 0 400 170" style="color:#E7E3E0" aria-hidden="true"><use href="#furgone"/></svg></div>
+        <div class="body">
+          <div><h3>Ford Transit Custom</h3><div class="ver">2.0 EcoBlue 136 CV · furgone L1H1</div></div>
+          <div class="chips"><span class="chip">Diesel</span><span class="chip">Commerciale</span><span class="chip">3 posti</span></div>
+          <dl class="terms"><div><dt>Anticipo</dt><dd>3.500 €</dd></div><div><dt>Durata</dt><dd>48 mesi</dd></div><div><dt>Km/anno</dt><dd>25.000</dd></div></dl>
+          <div class="price-row"><div class="price">399 €<small>/mese</small><span class="iva">+ IVA</span></div><a class="btn btn-dark" href="#contatti">Dettagli</a></div>
+        </div>
+      </article>
+
+      <article class="offer" data-cat="elettrica">
+        <div class="pic"><svg viewBox="0 0 400 170" style="color:#DFB3A7" aria-hidden="true"><use href="#citycar"/></svg></div>
+        <div class="body">
+          <div><h3>Renault 5 E-Tech</h3><div class="ver">52 kWh · autonomia 410 km WLTP</div></div>
+          <div class="chips"><span class="chip">Elettrica</span><span class="chip">City car</span><span class="chip">150 CV</span></div>
+          <dl class="terms"><div><dt>Anticipo</dt><dd>3.000 €</dd></div><div><dt>Durata</dt><dd>36 mesi</dd></div><div><dt>Km/anno</dt><dd>15.000</dd></div></dl>
+          <div class="price-row"><div class="price">299 €<small>/mese</small><span class="iva">IVA inclusa</span></div><a class="btn btn-dark" href="#contatti">Dettagli</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block incluso" id="privati">
+  <div class="wrap">
+    <div class="head"><div><h2>Cosa c'è nel canone</h2><p>Paghi una rata fissa. Le spese del veicolo le gestiamo noi.</p></div></div>
+    <div class="inc-grid">
+      <div class="inc"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></div><div><h3>RCA e Kasko</h3><p>Copertura completa con franchigia definita nel contratto.</p></div></div>
+      <div class="inc"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div><div><h3>Manutenzione</h3><p>Tagliandi e manutenzione ordinaria e straordinaria in rete convenzionata.</p></div></div>
+      <div class="inc"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 3h10v18l-5-3-5 3z"/></svg></div><div><h3>Bollo e immatricolazione</h3><p>Tassa di proprietà e pratiche pagate per tutta la durata.</p></div></div>
+      <div class="inc"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div><div><h3>Soccorso stradale 24/7</h3><p>Assistenza in Italia e in Europa, con auto sostitutiva.</p></div></div>
+      <div class="inc"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></div><div><h3>Pneumatici</h3><p>Cambio stagionale e sostituzione per usura, a seconda del pacchetto.</p></div></div>
+      <div class="inc"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 10h18M5 6h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/></svg></div><div><h3>Canone fisso</h3><p>Nessuna sorpresa: la rata non cambia per tutto il contratto.</p></div></div>
+      <div class="inc" id="aziende"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16M16 9h2a2 2 0 0 1 2 2v10M8 7h4M8 11h4M8 15h4"/></svg></div><div><h3>Vantaggi per le aziende</h3><p>Deducibilità e IVA detraibile secondo la normativa, gestione flotte dedicata.</p></div></div>
+      <div class="inc"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><div><h3>Ricarica elettrica</h3><p>Wallbox e installazione disponibili sui modelli elettrici.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="come-funziona">
+  <div class="wrap">
+    <div class="head"><div><h2>Come funziona</h2><p>Dalla richiesta alla consegna in quattro passi.</p></div></div>
+    <ol class="steps">
+      <li><h3>Scegli il veicolo</h3><p>Cerca tra le offerte o chiedici il modello che ti interessa.</p></li>
+      <li><h3>Ricevi il preventivo</h3><p>Un consulente DemiMobility ti propone durata, km e anticipo.</p></li>
+      <li><h3>Firma online</h3><p>Carichi i documenti nell'area riservata e firmi in digitale.</p></li>
+      <li><h3>Ritira l'auto</h3><p>Consegna presso il punto concordato o a domicilio.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="wrap" id="contatti">
+  <div class="quote">
+    <div>
+      <div class="eyebrow">Preventivo gratuito</div>
+      <h2 style="margin-top:12px">Parla con un consulente DemiMobility</h2>
+      <p>Lasciaci i tuoi dati: ti ricontattiamo entro un giorno lavorativo con una proposta su misura.</p>
+      <div class="contact-line"><span>Telefono</span>000 000 0000</div>
+      <div class="contact-line"><span>Email</span>info@esempio.it</div>
+    </div>
+    <form class="form" id="preventivo">
+      <div class="field"><label for="p-nome">Nome e cognome</label><input id="p-nome" value="Giulia Rossi"></div>
+      <div class="field"><label for="p-tel">Telefono</label><input id="p-tel" inputmode="tel" value="333 123 4567"></div>
+      <div class="field full"><label for="p-mail">Email</label><input id="p-mail" type="email" value="giulia.rossi@esempio.it"></div>
+      <div class="field full"><label>Sei un</label>
+        <div class="seg">
+          <label><input type="radio" name="p-tipo" id="p-tipo-priv" checked> Privato</label>
+          <label><input type="radio" name="p-tipo" id="p-tipo-piva"> Partita IVA</label>
+          <label><input type="radio" name="p-tipo" id="p-tipo-az"> Azienda</label>
+        </div>
+      </div>
+      <div class="field full"><label for="p-msg">Veicolo o richiesta</label><textarea id="p-msg" rows="3">Toyota C-HR, 48 mesi, 20.000 km l'anno</textarea></div>
+      <label class="privacy full"><input type="checkbox" id="p-privacy" checked> Ho letto l'informativa privacy e acconsento al trattamento dei dati per ricevere il preventivo.</label>
+      <div class="full"><button class="btn btn-rosa" type="submit">Richiedi preventivo</button></div>
+      <div class="sent" id="p-ok" hidden>Richiesta registrata (mockup: nessun dato viene inviato).</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#" aria-label="DemiMobility">
+          <svg viewBox="0 0 295 410" aria-hidden="true" style="height:40px"><use href="#simbolo"/></svg>
+          <span class="brand-text"><span class="brand-name" style="font-size:22px">DemiMobility</span><span class="brand-tag">Noleggio a lungo termine</span></span>
+        </a>
+        <p style="margin-top:16px;max-width:30em">Noleggio a lungo termine di auto e veicoli commerciali per privati, professionisti e aziende.</p>
+      </div>
+      <div><h4>Noleggio</h4><ul><li><a href="#offerte">Offerte</a></li><li><a href="#privati">Privati</a></li><li><a href="#aziende">Aziende e P.IVA</a></li><li><a href="#offerte">Elettriche</a></li></ul></div>
+      <div><h4>Supporto</h4><ul><li><a href="#come-funziona">Come funziona</a></li><li><a href="#">Domande frequenti</a></li><li><a href="#">Area riservata</a></li><li><a href="#contatti">Contatti</a></li></ul></div>
+      <div><h4>Note legali</h4><ul><li><a href="#">Privacy</a></li><li><a href="#">Cookie</a></li><li><a href="#">Trasparenza</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© 2026 DemiMobility · P.IVA 00000000000</span><span>Offerte soggette ad approvazione della società di noleggio.</span></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var tabs = document.querySelectorAll('.tab');
+  var cards = document.querySelectorAll('#offer-grid .offer');
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      tabs.forEach(function (x) { x.setAttribute('aria-pressed', x === t ? 'true' : 'false'); });
+      var f = t.dataset.f;
+      cards.forEach(function (c) { c.hidden = !(f === 'tutte' || c.dataset.cat === f); });
+    });
+  });
+  document.getElementById('preventivo').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('p-ok').hidden = false;
+  });
+})();
+</script>
