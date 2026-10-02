@@ -25,6 +25,7 @@
 
 /* tocchi di rosa */
 .topbar strong{color:var(--rosa);}
+.topbar-inner{justify-content:flex-end;}  /* topbar senza la frase "in partnership" */
 .nav{border-bottom:3px solid var(--rosa);}
 .nav-cta,.nav-cta:hover{color:var(--navy);}
 .btn-accent,.btn-accent:hover{color:var(--navy);}
