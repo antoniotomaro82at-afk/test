@@ -7,6 +7,7 @@
   --rosa:#DFB3A7;        /* rosa antico del simbolo Demi */
   --rosa-2:#D3A091;      /* hover */
   --rosa-ink:#9A6153;    /* rosa scuro per testi su fondo bianco */
+  --rosa-tenue:#F8EDE9;  /* fondo rosa chiarissimo per box e icone */
   --accent:var(--rosa);
   --accent-2:var(--rosa-2);
   --promo:#B97A6A;
@@ -33,3 +34,18 @@
 .faq-item summary::after{color:var(--rosa-ink);}
 .vcard:hover .vcard-foot strong{color:var(--rosa-ink);}
 .finder{border-top:3px solid var(--rosa);}
+
+/* elenco vetture */
+.vcard{box-shadow:inset 0 -3px 0 var(--rosa-tenue);}
+.vcard:hover{box-shadow:inset 0 -3px 0 var(--rosa),0 18px 36px -22px rgba(15,43,82,.45);}
+.vcard-price span{color:var(--rosa);}
+.vcard-meta svg{color:var(--rosa-ink);}
+.results-view.list .vcard:hover{box-shadow:inset 0 -3px 0 var(--rosa),0 18px 36px -22px rgba(15,43,82,.45);}
+
+/* titoli e box */
+.sec-title::after{content:"";display:block;width:56px;height:4px;background:var(--rosa);margin-top:12px;}
+.sec-title.center::after{margin-left:auto;margin-right:auto;}
+.filters-head{border-bottom:2px solid var(--rosa);}
+.adv-ic{background:var(--rosa-tenue);color:var(--rosa-ink);}
+.adv{border-top:3px solid var(--rosa);}
+.step{border-top-color:var(--rosa);}
