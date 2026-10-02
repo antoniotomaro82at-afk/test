@@ -15,13 +15,13 @@
 
 /* logo: simbolo Demi + scritta Demi Mobility */
 .brand-demi{display:inline-flex;align-items:center;gap:11px;line-height:1;}
-.brand-demi svg{height:40px;width:auto;flex:0 0 auto;}
+.brand-demi img,.brand-demi svg{height:40px;width:auto;max-width:none;flex:0 0 auto;}
 .brand-demi .bd-text{display:flex;flex-direction:column;}
 .brand-demi .bd-name{white-space:nowrap;font-family:"Quicksand",var(--sans);font-weight:700;font-size:24px;letter-spacing:-.01em;color:var(--navy);}
 .brand-demi .bd-tag{font-family:"Quicksand",var(--sans);font-weight:600;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--rosa-ink);margin-top:4px;}
 .foot-brand .brand-demi .bd-name{color:#fff;}
 .foot-brand .brand-demi .bd-tag{color:var(--rosa);}
-@media (max-width:640px){.brand-demi svg{height:34px}.brand-demi .bd-name{font-size:20px}.brand-demi .bd-tag{display:none}}
+@media (max-width:640px){.brand-demi img,.brand-demi svg{height:34px}.brand-demi .bd-name{font-size:20px}.brand-demi .bd-tag{display:none}}
 
 /* tocchi di rosa */
 .topbar strong{color:var(--rosa);}
