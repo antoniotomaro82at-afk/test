@@ -1,0 +1,35 @@
+/* =====================================================================
+   Demi Mobility: personalizzazione del marchio.
+   Si carica DOPO styles.css e cambia solo logo e accento (rosa antico
+   del simbolo Demi). Layout, blu e struttura del portale restano invariati.
+   ===================================================================== */
+:root{
+  --rosa:#DFB3A7;        /* rosa antico del simbolo Demi */
+  --rosa-2:#D3A091;      /* hover */
+  --rosa-ink:#9A6153;    /* rosa scuro per testi su fondo bianco */
+  --accent:var(--rosa);
+  --accent-2:var(--rosa-2);
+  --promo:#B97A6A;
+}
+
+/* logo: simbolo Demi + scritta Demi Mobility */
+.brand-demi{display:inline-flex;align-items:center;gap:11px;line-height:1;}
+.brand-demi svg{height:40px;width:auto;flex:0 0 auto;}
+.brand-demi .bd-text{display:flex;flex-direction:column;}
+.brand-demi .bd-name{white-space:nowrap;font-family:"Quicksand",var(--sans);font-weight:700;font-size:24px;letter-spacing:-.01em;color:var(--navy);}
+.brand-demi .bd-tag{font-family:"Quicksand",var(--sans);font-weight:600;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--rosa-ink);margin-top:4px;}
+.foot-brand .brand-demi .bd-name{color:#fff;}
+.foot-brand .brand-demi .bd-tag{color:var(--rosa);}
+@media (max-width:640px){.brand-demi svg{height:34px}.brand-demi .bd-name{font-size:20px}.brand-demi .bd-tag{display:none}}
+
+/* tocchi di rosa */
+.topbar strong{color:var(--rosa);}
+.nav{border-bottom:3px solid var(--rosa);}
+.nav-cta,.nav-cta:hover{color:var(--navy);}
+.btn-accent,.btn-accent:hover{color:var(--navy);}
+.btn-onnavy:hover{color:var(--navy);}
+.apill:hover{color:var(--navy);}
+.filters-reset{color:var(--rosa-ink);}
+.faq-item summary::after{color:var(--rosa-ink);}
+.vcard:hover .vcard-foot strong{color:var(--rosa-ink);}
+.finder{border-top:3px solid var(--rosa);}

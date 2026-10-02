@@ -1,11 +1,13 @@
-# Mockup portale DemiMobility
+# Mockup portale Demi Mobility
 
-Mockup grafico del portale di noleggio a lungo termine con il marchio DemiMobility.
+Copia statica della vista catalogo di `demimobilitynlt.be-work.it` (repository GitLab del sito, letto tramite BeDev), con due sole modifiche:
 
-- `mockup/index.html` – pagina completa, apribile direttamente nel browser
-- `mockup/portale-demimobility.body.html` – stessa pagina senza intestazione HTML (versione pubblicata come artifact)
-- `mockup/demi-simbolo.png` – simbolo del logo ritagliato dal file originale
-- `mockup/logo-originale-demiconsulting.png` – logo originale fornito
+1. **Logo**: il logo NLT è sostituito dal simbolo Demi (vettoriale, `assets/demi-simbolo.svg`) con la scritta "Demi Mobility".
+2. **Rosa antico** `#DFB3A7` (colore del simbolo) come colore di accento al posto dell'arancio/rosso.
 
-Colore del marchio: `#DFB3A7` (rosa del simbolo). Il simbolo nella pagina è ridisegnato in SVG; la scritta "DemiMobility" usa il font Quicksand.
-Veicoli, prezzi e contatti sono esempi.
+File:
+- `sito-demimobility/styles.css`: copia dello stile del sito (parte catalogo), invariato.
+- `sito-demimobility/demi-brand.css`: **tutte le modifiche di marchio**, da caricare dopo `styles.css`.
+- `sito-demimobility/index.html`: pagina del mockup (generata da `index.tpl.html`); veicoli e canoni sono esempi, sul sito reale arrivano dal catalogo REST.
+
+Per applicarlo al sito reale bastano `demi-brand.css` (incluso dopo `styles.css`) e il markup del logo `.brand-demi` nell'header e nel footer di `index.html`.

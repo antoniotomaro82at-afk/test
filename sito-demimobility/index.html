@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demi Mobility · Noleggio a Lungo Termine</title>
+<meta name="theme-color" content="#0f2b52">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/demi-simbolo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="demi-brand.css">
+<style>
+/* solo per il mockup: segnaposto foto veicolo */
+.vcard-media .media-fallback{color:var(--navy-2);padding-bottom:56px;line-height:1.3;}
+.vcard-media .car-ph svg{width:84px;height:40px;color:#9fb3cc;}
+.mock-note{background:#111;color:#fff;font-size:11px;letter-spacing:.06em;text-transform:uppercase;text-align:center;padding:7px 14px;}
+</style>
+</head>
+<body>
+
+	<div class="mock-note">Mockup · logo e accento Demi Mobility · veicoli e canoni di esempio</div>
+
+	<div class="topbar">
+		<div class="wrap topbar-inner">
+			<span>Un servizio in partnership con <strong>Demi Mobility</strong></span>
+			<a href="#faq">Assistenza clienti</a>
+		</div>
+	</div>
+
+	<header class="nav" id="nav">
+		<div class="nav-inner">
+			<div class="nav-left">
+				<button class="nav-toggle" id="navToggle" aria-label="Apri il menu" aria-expanded="false">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+				</button>
+				<a class="brand" href="#top" id="brandHome" aria-label="Demi Mobility home"><span class="brand-demi"><svg viewBox="0 0 295 410" aria-hidden="true"><rect x="0" y="0" width="295" height="55" rx="3" fill="#DFB3A7"/><path d="M0 58 A146 146 0 0 1 0 350 L0 298 A94 94 0 0 0 0 110 Z" fill="#DFB3A7"/><path d="M295 58 A146 146 0 0 0 295 350 L295 298 A94 94 0 0 1 295 110 Z" fill="#DFB3A7"/><rect x="0" y="355" width="295" height="55" rx="3" fill="#DFB3A7"/></svg><span class="bd-text"><span class="bd-name">Demi Mobility</span><span class="bd-tag">Noleggio a lungo termine</span></span></span></a>
+				<nav class="nav-links" aria-label="Principale">
+					<a href="#catalogo">Noleggio Privati <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></a>
+					<a href="#catalogo">Noleggio Business <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></a>
+					<a href="#vantaggi">Vantaggi</a>
+					<a href="#come-funziona">Come funziona</a>
+					<a href="#faq">FAQ</a>
+				</nav>
+			</div>
+			<a class="nav-cta" href="#catalogo">
+				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 13l1.6-4.8A2 2 0 0 1 6.5 6.8h11a2 2 0 0 1 1.9 1.4L21 13v4.5a1 1 0 0 1-1 1h-1.2a1 1 0 0 1-1-1V17H6.2v.5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><circle cx="7" cy="17.8" r="1.4"/><circle cx="17" cy="17.8" r="1.4"/></svg>
+				Richiedi un preventivo
+			</a>
+		</div>
+	</header>
+	<a id="top"></a>
+
+	<div id="catalogView">
+
+		<section class="hero">
+			<figure class="hero-bg media-slot" data-slot="hero">
+				<div class="media-fallback"><span>Immagine hero</span><small>img/veicoli/hero.jpg</small></div>
+			</figure>
+			<div class="hero-overlay"></div>
+			<div class="wrap hero-grid">
+				<div class="hero-copy">
+					<h1>Il tuo noleggio<br>inizia da qui.</h1>
+					<p>Scegli la soluzione adatta a te</p>
+					<div class="hero-btns">
+						<a class="btn btn-primary" href="#catalogo">Offerte privati</a>
+						<a class="btn btn-ghost" href="#catalogo">Offerte business</a>
+					</div>
+				</div>
+
+				<div class="finder">
+					<h2>Trova il tuo veicolo</h2>
+					<span class="finder-label">Sei un utente</span>
+					<div class="finder-toggle"><button type="button" class="on">Privato</button><button type="button">Business</button></div>
+					<span class="finder-label">Categoria auto</span>
+					<div class="finder-cats" id="finderCats"><button type="button" class="tile"><svg viewBox="0 0 48 22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 15l2-6c.4-1.2 1.5-2 2.8-2h13.4l6 5H41c2.2 0 4 1.3 4 3v2H3z"/><circle cx="13" cy="17" r="3"/><circle cx="35" cy="17" r="3"/></svg><span>Autovettura</span></button><button type="button" class="tile"><svg viewBox="0 0 48 22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 16V6h24l8 6.5V16z"/><circle cx="14" cy="17" r="3"/><circle cx="33" cy="17" r="3"/></svg><span>Veicolo commerciale</span></button><button type="button" class="tile on"><svg viewBox="0 0 48 22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 11h36M24 4v14"/></svg><span>Tutte</span></button></div>
+					<a class="btn btn-primary finder-go" href="#catalogo">Scopri le offerte</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-head" id="catalogo">
+			<div class="wrap">
+				<nav class="crumb" aria-label="Percorso"><a href="#top">Home</a> <span>›</span> Noleggio a lungo termine</nav>
+				<div class="page-head-row">
+					<h2>Noleggio auto a lungo termine</h2>
+					<div class="profile-switch">
+						<span>Scegli il tuo profilo</span>
+						<div class="switch-pills" id="profiloSwitch" role="group" aria-label="Profilo cliente">
+							<button type="button" class="on" data-profile="privato">Privati</button>
+							<button type="button" data-profile="piva">P. IVA</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="catalogo section">
+			<div class="wrap catalogo-layout">
+
+				<aside class="filters" id="filters" aria-label="Filtri catalogo">
+					<div class="filters-head">
+						<h3>Filtri</h3>
+						<button type="button" class="filters-reset" id="resetFilters">Azzera</button>
+					</div>
+					<div class="filters-scroll">
+						<div class="fgroup">
+							<h4>Durata</h4>
+							<div class="tiles tiles-2" id="durataTiles"><button type="button" class="tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>24 mesi</span></button><button type="button" class="tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>36 mesi</span></button><button type="button" class="tile on"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>48 mesi</span></button><button type="button" class="tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>60 mesi</span></button></div>
+						</div>
+						<div class="fgroup">
+							<h4>Categoria auto</h4>
+							<div class="tiles" id="catTiles"><button type="button" class="tile"><svg viewBox="0 0 48 22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 15l2-6c.4-1.2 1.5-2 2.8-2h13.4l6 5H41c2.2 0 4 1.3 4 3v2H3z"/><circle cx="13" cy="17" r="3"/><circle cx="35" cy="17" r="3"/></svg><span>Autovettura</span></button><button type="button" class="tile"><svg viewBox="0 0 48 22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 16V6h24l8 6.5V16z"/><circle cx="14" cy="17" r="3"/><circle cx="33" cy="17" r="3"/></svg><span>Veicolo commerciale</span></button></div>
+						</div>
+						<div class="fgroup">
+							<h4>Marca</h4>
+							<select id="marcaSelect" class="fsel" aria-label="Filtra per marca"><option value="">Tutte le marche</option><option>Fiat</option><option>Ford</option><option>Peugeot</option><option>Renault</option><option>Toyota</option><option>Volkswagen</option></select>
+							<h4 class="mt">Modello</h4>
+							<select id="modelloSelect" class="fsel" aria-label="Filtra per modello"><option value="">Tutti i modelli</option></select>
+						</div>
+						<div class="fgroup">
+							<h4>Canone / mese</h4>
+							<input type="range" id="prezzoRange" class="frange" min="219" max="429" value="429" aria-label="Canone massimo">
+							<div class="frange-labels"><span id="prezzoMin">219 €</span><span id="prezzoMax">429 €</span></div>
+						</div>
+						<div class="fgroup">
+							<h4>Alimentazione e cambio</h4>
+							<div class="switches" id="techSwitches"><label class="sw"><input type="checkbox"><span class="sw-track"></span><span class="sw-label">Benzina / Diesel</span></label><label class="sw"><input type="checkbox"><span class="sw-track"></span><span class="sw-label">Elettrico</span></label><label class="sw"><input type="checkbox"><span class="sw-track"></span><span class="sw-label">Full hybrid</span></label><label class="sw"><input type="checkbox"><span class="sw-track"></span><span class="sw-label">Mild hybrid</span></label><label class="sw"><input type="checkbox"><span class="sw-track"></span><span class="sw-label">Automatico</span></label><label class="sw"><input type="checkbox"><span class="sw-track"></span><span class="sw-label">CVT</span></label><label class="sw"><input type="checkbox"><span class="sw-track"></span><span class="sw-label">Doppia frizione</span></label><label class="sw"><input type="checkbox"><span class="sw-track"></span><span class="sw-label">Manuale</span></label></div>
+						</div>
+						<div class="fgroup">
+							<h4>Offerte e allestimenti</h4>
+							<div class="switches" id="flagSwitches"><label class="sw"><input type="checkbox"><span class="sw-track"></span><span class="sw-label">In promozione</span></label><label class="sw"><input type="checkbox"><span class="sw-track"></span><span class="sw-label">Auto sostitutiva inclusa</span></label><label class="sw"><input type="checkbox"><span class="sw-track"></span><span class="sw-label">Pneumatici illimitati</span></label></div>
+						</div>
+					</div>
+				</aside>
+
+				<div class="results">
+					<div class="results-bar">
+						<div class="rb-search">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+							<input type="search" id="searchInput" placeholder="Cerca marca, modello o allestimento" aria-label="Cerca veicolo" autocomplete="off">
+						</div>
+						<span class="rb-count" id="resultsCount" role="status">6 veicoli</span>
+						<select id="sortSelect" class="rb-select" aria-label="Ordina i risultati">
+							<option value="prezzo-asc">Canone crescente</option>
+							<option value="prezzo-desc">Canone decrescente</option>
+							<option value="marca">Marca (A–Z)</option>
+						</select>
+						<div class="viewtoggle" id="viewToggle" role="group" aria-label="Modalità di visualizzazione">
+							<button type="button" class="on" data-view="grid" aria-label="Vista a griglia" title="Vista a griglia">
+								<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7.5" height="7.5"/><rect x="13.5" y="3" width="7.5" height="7.5"/><rect x="3" y="13.5" width="7.5" height="7.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5"/></svg>
+								<span>Griglia</span>
+							</button>
+							<button type="button" data-view="list" aria-label="Vista a lista" title="Vista a lista">
+								<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="5"/><rect x="3" y="15" width="18" height="5"/></svg>
+								<span>Lista</span>
+							</button>
+						</div>
+					</div>
+
+					<div class="activepills" id="activePills"><button type="button" class="apill">48 mesi ×</button></div>
+
+					<div class="results-view grid" id="vehicleGrid">
+<article class="vcard" tabindex="0" role="link" aria-label="Fiat Pandina">
+<div class="vcard-head"><figure class="vcard-media media-slot no-photo"><div class="media-fallback"><span class="car-ph"><svg viewBox="0 0 48 22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 15l2-6c.4-1.2 1.5-2 2.8-2h13.4l6 5H41c2.2 0 4 1.3 4 3v2H3z"/><circle cx="13" cy="17" r="3"/><circle cx="35" cy="17" r="3"/></svg></span><span>Fiat Pandina</span><small>Foto veicolo</small></div></figure><span class="vcard-ribbon hot">In promozione</span><div class="vcard-price"><b>219€</b><span>IVA inclusa/mese</span></div></div>
+<div class="vcard-body"><h3 class="vcard-title">Fiat Pandina</h3><p class="vcard-trim">1.0 Hybrid 70 CV Pop</p>
+<div class="vcard-meta"><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg>Mild hybrid</span><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 4v16M12 4v16M17 4v10M4 9h16"/><circle cx="7" cy="4" r="1.4"/><circle cx="17" cy="4" r="1.4"/></svg>Manuale</span><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>48 mesi</span><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 21L9 3M18 21L15 3M12 5v3M12 11v3M12 17v3"/></svg>15.000 km</span></div>
+<div class="vcard-foot"><span>15.000 km/anno · 0€ anticipo</span><strong>Scopri →</strong></div></div></article>
+<article class="vcard" tabindex="0" role="link" aria-label="Toyota Yaris Cross">
+<div class="vcard-head"><figure class="vcard-media media-slot no-photo"><div class="media-fallback"><span class="car-ph"><svg viewBox="0 0 48 22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 15l2-6c.4-1.2 1.5-2 2.8-2h13.4l6 5H41c2.2 0 4 1.3 4 3v2H3z"/><circle cx="13" cy="17" r="3"/><circle cx="35" cy="17" r="3"/></svg></span><span>Toyota Yaris Cross</span><small>Foto veicolo</small></div></figure><span class="vcard-ribbon">Pronta consegna</span><div class="vcard-price"><b>329€</b><span>IVA inclusa/mese</span></div></div>
+<div class="vcard-body"><h3 class="vcard-title">Toyota Yaris Cross</h3><p class="vcard-trim">1.5 Hybrid 116 CV Trend</p>
+<div class="vcard-meta"><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg>Full hybrid</span><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M9 11l3-3 3 3"/></svg>CVT</span><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>48 mesi</span><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 21L9 3M18 21L15 3M12 5v3M12 11v3M12 17v3"/></svg>15.000 km</span></div>
+<div class="vcard-foot"><span>15.000 km/anno · 0€ anticipo</span><strong>Scopri →</strong></div></div></article>
+<article class="vcard" tabindex="0" role="link" aria-label="Peugeot 2008">
+<div class="vcard-head"><figure class="vcard-media media-slot no-photo"><div class="media-fallback"><span class="car-ph"><svg viewBox="0 0 48 22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 15l2-6c.4-1.2 1.5-2 2.8-2h13.4l6 5H41c2.2 0 4 1.3 4 3v2H3z"/><circle cx="13" cy="17" r="3"/><circle cx="35" cy="17" r="3"/></svg></span><span>Peugeot 2008</span><small>Foto veicolo</small></div></figure><div class="vcard-price"><b>349€</b><span>IVA inclusa/mese</span></div></div>
+<div class="vcard-body"><h3 class="vcard-title">Peugeot 2008</h3><p class="vcard-trim">Hybrid 136 e-DCS6 Allure</p>
+<div class="vcard-meta"><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg>Mild hybrid</span><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M9 11l3-3 3 3"/></svg>Doppia frizione</span><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>48 mesi</span><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 21L9 3M18 21L15 3M12 5v3M12 11v3M12 17v3"/></svg>15.000 km</span></div>
+<div class="vcard-foot"><span>15.000 km/anno · 0€ anticipo</span><strong>Scopri →</strong></div></div></article>
+<article class="vcard" tabindex="0" role="link" aria-label="Volkswagen T-Roc">
+<div class="vcard-head"><figure class="vcard-media media-slot no-photo"><div class="media-fallback"><span class="car-ph"><svg viewBox="0 0 48 22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 15l2-6c.4-1.2 1.5-2 2.8-2h13.4l6 5H41c2.2 0 4 1.3 4 3v2H3z"/><circle cx="13" cy="17" r="3"/><circle cx="35" cy="17" r="3"/></svg></span><span>Volkswagen T-Roc</span><small>Foto veicolo</small></div></figure><div class="vcard-price"><b>369€</b><span>IVA inclusa/mese</span></div></div>
+<div class="vcard-body"><h3 class="vcard-title">Volkswagen T-Roc</h3><p class="vcard-trim">1.5 TSI ACT Life</p>
+<div class="vcard-meta"><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20V5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v15M3 20h11M6 9h5"/><path d="M16 9l2.5 2.5V17a1.8 1.8 0 0 0 3.5 0V8l-2.5-2.5"/></svg>Benzina / Diesel</span><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 4v16M12 4v16M17 4v10M4 9h16"/><circle cx="7" cy="4" r="1.4"/><circle cx="17" cy="4" r="1.4"/></svg>Manuale</span><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>48 mesi</span><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 21L9 3M18 21L15 3M12 5v3M12 11v3M12 17v3"/></svg>15.000 km</span></div>
+<div class="vcard-foot"><span>15.000 km/anno · 0€ anticipo</span><strong>Scopri →</strong></div></div></article>
+<article class="vcard" tabindex="0" role="link" aria-label="Renault 5 E-Tech">
+<div class="vcard-head"><figure class="vcard-media media-slot no-photo"><div class="media-fallback"><span class="car-ph"><svg viewBox="0 0 48 22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 15l2-6c.4-1.2 1.5-2 2.8-2h13.4l6 5H41c2.2 0 4 1.3 4 3v2H3z"/><circle cx="13" cy="17" r="3"/><circle cx="35" cy="17" r="3"/></svg></span><span>Renault 5 E-Tech</span><small>Foto veicolo</small></div></figure><span class="vcard-ribbon hot">In promozione</span><div class="vcard-price"><b>389€</b><span>IVA inclusa/mese</span></div></div>
+<div class="vcard-body"><h3 class="vcard-title">Renault 5 E-Tech</h3><p class="vcard-trim">52 kWh 150 CV Techno</p>
+<div class="vcard-meta"><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg>Elettrico</span><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M9 11l3-3 3 3"/></svg>Automatico</span><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>48 mesi</span><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 21L9 3M18 21L15 3M12 5v3M12 11v3M12 17v3"/></svg>15.000 km</span></div>
+<div class="vcard-foot"><span>15.000 km/anno · 0€ anticipo</span><strong>Scopri →</strong></div></div></article>
+<article class="vcard" tabindex="0" role="link" aria-label="Ford Transit Custom">
+<div class="vcard-head"><figure class="vcard-media media-slot no-photo"><div class="media-fallback"><span class="car-ph"><svg viewBox="0 0 48 22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 16V6h24l8 6.5V16z"/><circle cx="14" cy="17" r="3"/><circle cx="33" cy="17" r="3"/></svg></span><span>Ford Transit Custom</span><small>Foto veicolo</small></div></figure><span class="vcard-ribbon">Pronta consegna</span><div class="vcard-price"><b>429€</b><span>IVA inclusa/mese</span></div></div>
+<div class="vcard-body"><h3 class="vcard-title">Ford Transit Custom</h3><p class="vcard-trim">2.0 EcoBlue 136 CV L1H1 Trend</p>
+<div class="vcard-meta"><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20V5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v15M3 20h11M6 9h5"/><path d="M16 9l2.5 2.5V17a1.8 1.8 0 0 0 3.5 0V8l-2.5-2.5"/></svg>Benzina / Diesel</span><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 4v16M12 4v16M17 4v10M4 9h16"/><circle cx="7" cy="4" r="1.4"/><circle cx="17" cy="4" r="1.4"/></svg>Manuale</span><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>48 mesi</span><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 21L9 3M18 21L15 3M12 5v3M12 11v3M12 17v3"/></svg>15.000 km</span></div>
+<div class="vcard-foot"><span>15.000 km/anno · 0€ anticipo</span><strong>Scopri →</strong></div></div></article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="vantaggi" class="section section-alt">
+			<div class="wrap">
+				<h2 class="sec-title">Perché scegliere il noleggio a lungo termine</h2>
+				<div class="adv-grid">
+					<div class="adv">
+						<div class="adv-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></div>
+						<h3>Canone mensile fisso</h3>
+						<p>Sai sempre quanto spendi: tutti i costi sono predeterminati per l'intera durata.</p>
+					</div>
+					<div class="adv">
+						<div class="adv-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg></div>
+						<h3>Servizi inclusi</h3>
+						<p>Manutenzione ordinaria e straordinaria, RCA e assistenza stradale 24/7 nel canone.</p>
+					</div>
+					<div class="adv">
+						<div class="adv-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 17l4-9 4 9M6.5 12h3M14 17V7h4a3 3 0 0 1 0 6h-4"/></svg></div>
+						<h3>Anche con anticipo zero</h3>
+						<p>Nessun immobilizzo di capitale e nessuna maxi rata finale da sostenere.</p>
+					</div>
+					<div class="adv">
+						<div class="adv-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+						<h3>Libertà a fine contratto</h3>
+						<p>Alla scadenza scegli se restituire il veicolo, cambiarlo o proseguire.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="band">
+			<figure class="band-bg media-slot" data-slot="band">
+				<div class="media-fallback"><span>Immagine fascia</span><small>img/veicoli/band.jpg</small></div>
+			</figure>
+			<div class="band-overlay"></div>
+			<div class="wrap band-inner">
+				<h2>Tu scegli il veicolo.<br>Al resto pensiamo noi.</h2>
+				<a class="btn btn-accent" href="#catalogo">Vai al catalogo</a>
+			</div>
+		</section>
+
+		<section id="come-funziona" class="section">
+			<div class="wrap">
+				<h2 class="sec-title">Come funziona</h2>
+				<div class="steps">
+					<div class="step"><span class="step-n">1</span><h3>Scegli il veicolo</h3><p>Filtra il catalogo per categoria, alimentazione e cambio.</p></div>
+					<div class="step"><span class="step-n">2</span><h3>Configura il canone</h3><p>Imposta durata, chilometraggio e anticipo: la rata si aggiorna subito.</p></div>
+					<div class="step"><span class="step-n">3</span><h3>Richiedi il preventivo</h3><p>Un consulente Demi Mobility formalizza la proposta di noleggio.</p></div>
+					<div class="step"><span class="step-n">4</span><h3>Ritira e guida</h3><p>Manutenzione, assicurazione e assistenza restano incluse.</p></div>
+				</div>
+			</div>
+		</section>
+
+		<section id="faq" class="section section-alt">
+			<div class="wrap narrow">
+				<h2 class="sec-title">Domande frequenti</h2>
+				<div class="faq-list">
+					<details class="faq-item">
+						<summary>Cosa comprende il canone mensile?</summary>
+						<p>Il canone indicativo comprende manutenzione ordinaria e straordinaria,
+							assicurazione RCA e assistenza stradale. I dettagli definitivi vengono
+							confermati in fase di preventivo.</p>
+					</details>
+					<details class="faq-item">
+						<summary>Il canone del configuratore è definitivo?</summary>
+						<p>No: il configuratore mostra una stima che varia in base a durata,
+							chilometraggio annuo e anticipo scelti. Il canone definitivo viene
+							formalizzato nella proposta di noleggio.</p>
+					</details>
+					<details class="faq-item">
+						<summary>Posso richiedere un chilometraggio personalizzato?</summary>
+						<p>Sì: i chilometraggi proposti sono i più richiesti, ma possono essere
+							ridefiniti con il consulente in base alle tue esigenze.</p>
+					</details>
+					<details class="faq-item">
+						<summary>Questa pagina è già online in produzione?</summary>
+						<p>Sì: il catalogo e i canoni mostrati provengono dal listino Demi Mobility collegato al servizio REST. Il canone resta indicativo e soggetto ad approvazione.</p>
+					</details>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<footer class="foot">
+		<div class="wrap">
+			<div class="foot-cols">
+				<div class="foot-col foot-brand">
+					<a class="brand" href="#top" aria-label="Demi Mobility home"><span class="brand-demi"><svg viewBox="0 0 295 410" aria-hidden="true"><rect x="0" y="0" width="295" height="55" rx="3" fill="#DFB3A7"/><path d="M0 58 A146 146 0 0 1 0 350 L0 298 A94 94 0 0 0 0 110 Z" fill="#DFB3A7"/><path d="M295 58 A146 146 0 0 0 295 350 L295 298 A94 94 0 0 1 295 110 Z" fill="#DFB3A7"/><rect x="0" y="355" width="295" height="55" rx="3" fill="#DFB3A7"/></svg><span class="bd-text"><span class="bd-name">Demi Mobility</span><span class="bd-tag">Noleggio a lungo termine</span></span></span></a>
+					<p>Noleggio a Lungo Termine<br>in partnership con Demi Mobility</p>
+				</div>
+				<div class="foot-col">
+					<h4>Noleggio</h4>
+					<a href="#catalogo">Offerte privati</a>
+					<a href="#catalogo">Offerte business</a>
+					<a href="#catalogo">Veicoli commerciali</a>
+					<a href="#catalogo">Elettriche e ibride</a>
+				</div>
+				<div class="foot-col">
+					<h4>Servizio</h4>
+					<a href="#vantaggi">Vantaggi del noleggio</a>
+					<a href="#come-funziona">Come funziona</a>
+					<a href="#faq">Domande frequenti</a>
+				</div>
+				<div class="foot-col">
+					<h4>Contatti</h4>
+					<a href="#catalogo">Richiedi un preventivo</a>
+					<a href="#faq">Assistenza clienti</a>
+					<a href="#gestione-nlt">Area gestione NLT</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+<script>
+/* interazioni minime del mockup (il sito reale usa script.js con il catalogo REST) */
+(function () {
+	var nav = document.getElementById('nav'), t = document.getElementById('navToggle');
+	t.addEventListener('click', function () { var o = nav.classList.toggle('open'); t.setAttribute('aria-expanded', o); });
+	function group(sel) {
+		document.querySelectorAll(sel).forEach(function (box) {
+			box.addEventListener('click', function (e) {
+				var b = e.target.closest('button'); if (!b) return;
+				box.querySelectorAll('button').forEach(function (x) { x.classList.toggle('on', x === b); });
+			});
+		});
+	}
+	group('.finder-toggle'); group('#profiloSwitch'); group('#durataTiles'); group('#finderCats');
+	document.querySelectorAll('#catTiles .tile').forEach(function (b) { b.addEventListener('click', function () { b.classList.toggle('on'); }); });
+	var grid = document.getElementById('vehicleGrid');
+	document.querySelectorAll('#viewToggle button').forEach(function (b) {
+		b.addEventListener('click', function () {
+			document.querySelectorAll('#viewToggle button').forEach(function (x) { x.classList.toggle('on', x === b); });
+			grid.className = 'results-view ' + b.dataset.view;
+		});
+	});
+})();
+</script>
+</body>
+</html>
