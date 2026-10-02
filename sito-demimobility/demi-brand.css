@@ -38,7 +38,9 @@
 /* elenco vetture */
 .vcard{box-shadow:inset 0 -3px 0 var(--rosa-tenue);}
 .vcard:hover{box-shadow:inset 0 -3px 0 var(--rosa),0 18px 36px -22px rgba(15,43,82,.45);}
-.vcard-price span{color:var(--rosa);}
+.vcard-price{background:linear-gradient(to top,rgba(223,179,167,.97),rgba(223,179,167,.86));}
+.vcard-price b{color:var(--navy);}
+.vcard-price span{color:var(--navy);opacity:.8;}
 .vcard-meta svg{color:var(--rosa-ink);}
 .results-view.list .vcard:hover{box-shadow:inset 0 -3px 0 var(--rosa),0 18px 36px -22px rgba(15,43,82,.45);}
 
