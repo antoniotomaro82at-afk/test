@@ -5,36 +5,29 @@ Oggetto: R: Accesso studenti LUMINIS: serve una decisione prima della ripartenza
 Gentile Dott.ssa Notarnicola,
 gentili Dottoresse Zainni e Pietrobono,
 
-ci scusiamo per il ritardo nel riscontro. Abbiamo esaminato la proposta aggiornata e ne abbiamo verificato la fattibilità sulla piattaforma. Di seguito rispondiamo per la parte di competenza di WSTECH.
+ci scusiamo per il ritardo. Abbiamo esaminato la proposta e rispondiamo per la parte di competenza di WSTECH.
 
 1. Realizzabilità
-La modifica è realizzabile. La piattaforma già oggi gestisce l'accesso con utente e password, sia da web sia da app: gli studenti potranno quindi accedere con un ID pseudonimo (ad esempio IC_RIPI_2A_001) senza cambiare il modo in cui usano la piattaforma.
-Gli interventi necessari sono:
-- una funzione, riservata al referente ASL, al coordinatore del progetto e agli amministratori WSTECH, per generare il pacchetto di credenziali di ciascuna classe (ID progressivo e password casuale diversa per ogni studente), senza alcun dato anagrafico, e scaricarlo in un file da consegnare al docente tutor o al referente della scuola;
-- possibilità per il docente di reimpostare la password dei propri studenti dalla sua area riservata;
-- disattivazione, per gli studenti, della registrazione libera (oggi richiede nome, cognome, codice fiscale ed email) e del recupero password via email;
-- verifica che nelle attività degli studenti non restino campi a testo libero in cui possano essere inseriti dati personali;
-- report per i docenti basati sugli ID, senza nomi né indirizzi email.
-Gli account di docenti e referenti resteranno invariati.
+La modifica è realizzabile: la piattaforma gestisce già l'accesso con utente e password, da web e da app, quindi gli studenti potranno accedere con un ID pseudonimo (es. IC_RIPI_2A_001). Gli interventi previsti sono:
+- generazione dei pacchetti di credenziali per classe (ID e password diversa per ogni studente, senza dati anagrafici), riservata al referente ASL, al coordinatore e agli amministratori WSTECH, con un file da consegnare alla scuola;
+- reset della password da parte del docente;
+- disattivazione, per gli studenti, della registrazione con dati personali e del recupero password via email;
+- report per i docenti basati sui soli ID.
+Gli account di docenti e referenti restano invariati.
 
-Precisiamo che questi sviluppi non rientrano nelle attività attualmente previste; tuttavia, credendo nel progetto e in vista della sua continuità, ci fa piacere realizzarli per migliorare la piattaforma e semplificarne la gestione.
+Questi sviluppi non rientrano nelle attività attualmente previste; tuttavia, credendo nel progetto e in vista della sua continuità, ci fa piacere realizzarli per migliorare la piattaforma e la sua gestione.
 
 2. Tempi
-Stimiamo circa due settimane di lavoro, comprese le prove. Per essere operativi alla ripartenza di inizio novembre abbiamo bisogno della conferma della ASL e delle indicazioni ai punti seguenti entro il 16 ottobre: in questo caso potremmo rendere disponibile il nuovo sistema entro fine ottobre, così da generare e consegnare alle scuole i pacchetti di credenziali prima dell'avvio.
+Stimiamo circa due settimane di lavoro. Con una conferma entro il 16 ottobre, il nuovo sistema sarebbe disponibile entro fine ottobre, in tempo per consegnare le credenziali prima della ripartenza.
 
 3. Account esistenti
-Proponiamo due possibilità:
-a) conservare i risultati già raccolti: a ogni studente attuale viene assegnato un nuovo ID nella sua classe, i suoi risultati restano collegati al nuovo ID e da tutta la piattaforma vengono cancellati nome, cognome, codice fiscale ed email. A ciascuna scuola consegniamo, con modalità sicura, l'elenco di corrispondenza tra vecchio account e nuovo ID, che dopo la consegna eliminiamo dai nostri sistemi;
-b) ripartire da zero: cancelliamo gli account esistenti con tutti i dati collegati e per ogni classe vengono generati nuovi pacchetti di credenziali.
-La seconda soluzione è più semplice e rapida; la prima è necessaria solo se i risultati dello scorso anno devono restare consultabili.
+Le possibilità sono due:
+a) convertire gli account attuali in ID pseudonimi, mantenendo i risultati raccolti e cancellando nome, cognome, codice fiscale ed email; a ogni scuola consegneremo in modo sicuro la corrispondenza tra vecchio account e nuovo ID;
+b) cancellare gli account esistenti e ripartire con nuove credenziali (soluzione più semplice e rapida, se i risultati dello scorso anno non servono).
 
-Per procedere ci servono:
-- dalla ASL, la conferma a procedere;
-- la scelta tra le opzioni a) e b) per gli account esistenti.
+Per procedere ci servono quindi la conferma della ASL e la scelta tra le opzioni a) e b).
 
-La proposta richiama anche alcuni aspetti privacy, tra cui il coinvolgimento dei DPO per la definizione dei ruoli e dei tempi di conservazione: lasciamo alla ASL la valutazione se e come procedere su questo punto, qualora non sia già stato affrontato. Da parte nostra restiamo a disposizione per fornire le informazioni tecniche che dovessero servire.
-
-Se utile, possiamo fissare una breve call nei prossimi giorni per chiudere questi punti.
+Quanto agli aspetti privacy richiamati nella proposta, compreso il coinvolgimento dei DPO, lasciamo alla ASL la valutazione se e come procedere, qualora non sia già stato fatto. Restiamo a disposizione per le informazioni tecniche necessarie e, se utile, per una breve call.
 
 Cordiali saluti,
 
