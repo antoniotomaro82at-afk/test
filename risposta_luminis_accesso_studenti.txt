@@ -32,7 +32,7 @@ Per procedere ci servono:
 - dalla ASL, la conferma a procedere;
 - la scelta tra le opzioni a) e b) per gli account esistenti.
 
-Per quanto riguarda gli aspetti privacy richiamati nella proposta (ruoli, eventuale coinvolgimento dei DPO, informativa e tempi di conservazione), lasciamo alla ASL la valutazione su come procedere; se già affrontati, nessun problema. Da parte nostra restiamo a disposizione per fornire le informazioni tecniche che dovessero servire.
+La proposta richiama anche alcuni aspetti privacy, tra cui il coinvolgimento dei DPO per la definizione dei ruoli e dei tempi di conservazione: lasciamo alla ASL la valutazione se e come procedere su questo punto, qualora non sia già stato affrontato. Da parte nostra restiamo a disposizione per fornire le informazioni tecniche che dovessero servire.
 
 Se utile, possiamo fissare una breve call nei prossimi giorni per chiudere questi punti.
 
