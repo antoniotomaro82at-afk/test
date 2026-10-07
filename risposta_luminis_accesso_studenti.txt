@@ -17,6 +17,8 @@ Gli interventi necessari sono:
 - report per i docenti basati sugli ID, senza nomi né indirizzi email.
 Gli account di docenti e referenti resteranno invariati.
 
+Precisiamo che questi sviluppi non rientrano nelle attività attualmente previste; tuttavia, credendo nel progetto e in vista della sua continuità, ci fa piacere realizzarli per migliorare la piattaforma e semplificarne la gestione.
+
 2. Tempi
 Stimiamo circa due settimane di lavoro, comprese le prove. Per essere operativi alla ripartenza di inizio novembre abbiamo bisogno della conferma della ASL e delle indicazioni ai punti seguenti entro il 16 ottobre: in questo caso potremmo rendere disponibile il nuovo sistema entro fine ottobre, così da generare e consegnare alle scuole i pacchetti di credenziali prima dell'avvio.
 
@@ -30,7 +32,7 @@ Per procedere ci servono:
 - dalla ASL, la conferma a procedere;
 - la scelta tra le opzioni a) e b) per gli account esistenti.
 
-Come indicato nella Sua proposta, la formalizzazione dei ruoli tra scuole, ASL e gestore della piattaforma, compresa la nomina di WSTECH come responsabile del trattamento ai sensi dell'art. 28, e la definizione dei tempi di conservazione dei dati andranno condotte con il supporto dei DPO coinvolti, così come l'aggiornamento dell'informativa alle famiglie. Questi aspetti non bloccano lo sviluppo, che può partire con la sola conferma della ASL, ma sarebbe opportuno definirli prima della messa in esercizio. Da parte nostra forniremo ai DPO tutte le informazioni tecniche necessarie: dati trattati, misure di sicurezza e modalità di cancellazione.
+Per quanto riguarda gli aspetti privacy richiamati nella proposta (ruoli, eventuale coinvolgimento dei DPO, informativa e tempi di conservazione), lasciamo alla ASL la valutazione su come procedere; se già affrontati, nessun problema. Da parte nostra restiamo a disposizione per fornire le informazioni tecniche che dovessero servire.
 
 Se utile, possiamo fissare una breve call nei prossimi giorni per chiudere questi punti.
 
