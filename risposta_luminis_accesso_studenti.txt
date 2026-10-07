@@ -28,12 +28,9 @@ La seconda soluzione è più semplice e rapida; la prima è necessaria solo se i
 
 Per procedere ci servono:
 - dalla ASL, la conferma a procedere;
-- la scelta tra le opzioni a) e b) per gli account esistenti;
-- l'elenco delle scuole partecipanti con il codice da usare per ciascuna nell'ID (ad esempio il codice meccanografico o una sigla concordata);
-- l'elenco delle classi partecipanti con il numero di studenti per ciascuna;
-- i nominativi del referente ASL e del coordinatore da abilitare alla generazione dei pacchetti.
+- la scelta tra le opzioni a) e b) per gli account esistenti.
 
-Restano invece da definire con i rispettivi DPO, come indicato nella proposta, la nomina di WSTECH come responsabile del trattamento ai sensi dell'art. 28, l'informativa alle famiglie e il periodo di conservazione dei dati. Siamo a disposizione per fornire le informazioni tecniche necessarie.
+Come indicato nella Sua proposta, la formalizzazione dei ruoli tra scuole, ASL e gestore della piattaforma, compresa la nomina di WSTECH come responsabile del trattamento ai sensi dell'art. 28, e la definizione dei tempi di conservazione dei dati andranno condotte con il supporto dei DPO coinvolti, così come l'aggiornamento dell'informativa alle famiglie. Questi aspetti non bloccano lo sviluppo, che può partire con la sola conferma della ASL, ma sarebbe opportuno definirli prima della messa in esercizio. Da parte nostra forniremo ai DPO tutte le informazioni tecniche necessarie: dati trattati, misure di sicurezza e modalità di cancellazione.
 
 Se utile, possiamo fissare una breve call nei prossimi giorni per chiudere questi punti.
 
