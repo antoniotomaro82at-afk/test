@@ -1,0 +1,29 @@
+Oggetto: Offerta WST2601 – richiesta di integrazioni prima della sottoscrizione
+
+Gentile Sig. Scagni,
+
+vi ringraziamo per l'offerta WST2601 del 07/10/2026. Prima di sottoscriverla vi chiediamo le seguenti integrazioni.
+
+1. Tutela dei clienti di WST
+Come previsto dalle Specifiche Tecniche, operiamo come Produttore dei PdV per conto dei nostri clienti, che saranno censiti come anagrafiche nel vostro sistema. Vi chiediamo di aggiungere al contratto una clausola con cui Intesi Group si impegna a:
+- non contattare, direttamente o tramite terzi, i Titolari dei documenti versati da WST e non formulare loro offerte per servizi di conservazione o di gestione di xFIR e registri RENTRI, per la durata del contratto e per i 24 mesi successivi;
+- trattare i dati dei clienti di WST esclusivamente per l'erogazione del servizio a WST, senza alcun uso a fini commerciali o promozionali.
+Di conseguenza, l'autorizzazione all'uso dei dati per "promuovere relazioni commerciali" prevista dall'art. 12 delle Condizioni Generali dovrebbe riguardare i soli dati di contatto di WST.
+
+2. Ruoli privacy
+L'art. 6 dell'offerta indica Intesi come Titolare e il Cliente come Responsabile, in contrasto con il DPA. Poiché WST tratta i dati per conto dei propri clienti, vi chiediamo di correggere l'art. 6 e di impostare il DPA con WST come Responsabile del trattamento e Intesi Group come sub-responsabile.
+
+3. Periodo di conservazione e canone
+Conserveremo xFIR e registri di carico e scarico RENTRI per 3 anni. Vi chiediamo di confermare il prezzo per GB applicabile a un periodo di conservazione triennale (l'offerta riporta un canone decennale) e di precisare come vengono calcolati i GB e applicate le fasce.
+
+4. Dati societari
+Vi segnaliamo che l'indirizzo corretto di WST è Via Cesare Terranova 74, 03100 Frosinone (FR); P.IVA e C.F. 02664400609.
+
+5. Altre voci da quotare
+Vi chiediamo infine di indicarci il costo della cancellazione oltre i 100.000 documenti, dell'esportazione in PdD e dell'eventuale consultazione in modalità ridotta.
+
+Restiamo in attesa di un vostro riscontro.
+
+Cordiali saluti,
+
+Web System Technology S.r.l.
