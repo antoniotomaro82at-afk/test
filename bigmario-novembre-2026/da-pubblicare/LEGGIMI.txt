@@ -1,0 +1,26 @@
+BIG MARIO – NOVEMBRE 2026 – CONTENUTI DA PUBBLICARE
+
+CALENDARIO
+01  giovedì 5 novembre     REEL       Instagram, Facebook, TikTok
+02  mercoledì 11 novembre  CAROSELLO  Instagram, Facebook, LinkedIn
+03  venerdì 20 novembre    CAROSELLO  Instagram, Facebook, LinkedIn
+04  giovedì 26 novembre    IMMAGINE   Instagram, Facebook
+05  16–30 novembre         SPONSORIZZATA (carosello) su Instagram e Facebook
+
+ORARIO CONSIGLIATO
+Tra le 15:00 e le 16:00, tra un servizio e l'altro. Le statistiche di Instagram
+non danno indicazioni sugli orari, quindi è una proposta da verificare.
+
+COME PUBBLICARE
+- In ogni cartella trovi le immagini o il video e un file di testo per ogni
+  piattaforma: copia il testo e incollalo come didascalia.
+- Caroselli su Instagram e Facebook: carica le immagini in ordine (01, 02, 03...).
+- Caroselli su LinkedIn: carica il file "carosello_linkedin.pdf" come documento
+  (Aggiungi documento) e dagli un titolo, per esempio "5 segnali che l'olio è da cambiare".
+- Reel: carica "reel.mp4" e scegli "copertina.jpg" come copertina.
+  Il video non ha musica: aggiungi un audio di tendenza dall'app, a volume basso.
+- Puoi programmare tutto da Meta Business Suite (Instagram e Facebook insieme).
+- Sponsorizzata: segui il file "impostazioni_inserzione.txt" nella cartella 05.
+
+Su Instagram i link nelle didascalie non sono cliccabili: per questo nei testi
+Instagram c'è "link in bio". Controlla che in bio ci sia il link ai contatti.
