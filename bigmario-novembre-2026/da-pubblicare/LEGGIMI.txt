@@ -18,7 +18,8 @@ COME PUBBLICARE
 - Caroselli su LinkedIn: carica il file "carosello_linkedin.pdf" come documento
   (Aggiungi documento) e dagli un titolo, per esempio "5 segnali che l'olio è da cambiare".
 - Reel: carica "reel.mp4" e scegli "copertina.jpg" come copertina.
-  Il video non ha musica: aggiungi un audio di tendenza dall'app, a volume basso.
+  Il video ha già voce fuori campo e musica: non aggiungere altri audio dall'app.
+  Attiva i sottotitoli automatici: aiutano chi guarda senza audio.
 - Puoi programmare tutto da Meta Business Suite (Instagram e Facebook insieme).
 - Sponsorizzata: segui il file "impostazioni_inserzione.txt" nella cartella 05.
 
