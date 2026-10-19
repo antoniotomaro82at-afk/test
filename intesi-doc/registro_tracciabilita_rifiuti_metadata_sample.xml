@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<DocumentoInformatico>
+	<IdDoc>
+		<ImprontaCrittograficaDelDocumento>
+			<Impronta>Hash SHA-256 del file relativo al documento versato in conservazione</Impronta>
+			<Algoritmo>SHA-256</Algoritmo>
+		</ImprontaCrittograficaDelDocumento>
+		<Identificativo>Identificativo univoco del documento</Identificativo>
+	</IdDoc>
+	<!-- 
+	ModalitaDiFormazione - Indicare la modalità di generazione del documento informatico.
+	A : creazione tramite l'utilizzo di strumenti software;
+	B : acquisizione di un documento informatico per via telematica o su supporto informatico, acquisizione della copia per immagine su supporto informatico di un documento analogico, acquisizione della copia informatica di un documento analogico;
+	C : memorizzazione su supporto informatico in formato digitale delle informazioni risultanti da transazioni o processi informatici o dalla presentazione telematica di dati attraverso moduli o formulari resi disponibili all’utente;
+	D : generazione o raggruppamento anche in via automatica di un insieme di dati o registrazioni, provenienti da una o più banche dati, anche appartenenti a più soggetti interoperanti, secondo una struttura logica predeterminata e memorizzata in forma statica. 
+	-->
+	<ModalitaDiFormazione>A</ModalitaDiFormazione>
+	<TipologiaDocumentale>Registro di Tracciabilità dei Rifiuti</TipologiaDocumentale>
+	<DatiDiRegistrazione>
+		<!-- 
+		TipologiaDiFlusso - Indicare se si tratta di:
+		E : documento in entrata all'organizzazione
+		I : documento interno all'organizzazione
+		U : documento in uscita dall'organizzazione 
+		-->
+		<TipologiaDiFlusso>I</TipologiaDiFlusso>
+		<TipoRegistro>
+			<Repertorio_Registro>
+                <TipoRegistro>Repertorio\Registro</TipoRegistro>
+                <DataRegistrazioneDocumento>Data Richiesta</DataRegistrazioneDocumento>
+                <NumeroRegistrazioneDocumento>Identificativo Registro/Richiesta</NumeroRegistrazioneDocumento>
+                <CodiceRegistro>Codice identificativo del registro (Es: “RENTRI“ o “REG_CRON_C_S”)</CodiceRegistro>
+			</Repertorio_Registro>
+		</TipoRegistro>
+	</DatiDiRegistrazione>
+	<Soggetti>
+		<Ruolo>
+			<!-- Soggetto con ruolo "Soggetto Che Effettua La Registrazione" - Indicare la società proprietaria del documento. -->
+			<SoggettoCheEffettuaLaRegistrazione>
+				<TipoRuolo>Soggetto Che Effettua La Registrazione</TipoRuolo>
+				<PG>
+					<DenominazioneOrganizzazione>Denominazione della società titolare del documento</DenominazioneOrganizzazione>
+					<CodiceFiscale_PartitaIva>Partita IVA/Codice fiscale (senza il codice paese, es. 02780480964) della società titolare del documento</CodiceFiscale_PartitaIva>
+				</PG>
+			</SoggettoCheEffettuaLaRegistrazione>
+		</Ruolo>
+		<Ruolo>
+			<!-- Soggetto con ruolo "Autore" - Indicare la società che emette il documento -->
+			<Autore>
+				<TipoRuolo>Autore</TipoRuolo>
+				<PG>
+					<DenominazioneOrganizzazione>Denominazione della società che emette il documento</DenominazioneOrganizzazione>
+					<CodiceFiscale_PartitaIva>Partita IVA/Codice fiscale (senza il codice paese, es. 02780480964) della società che emette il documento</CodiceFiscale_PartitaIva>
+				</PG>
+			</Autore>
+		</Ruolo>
+	</Soggetti>
+	<ChiaveDescrittiva>
+		<!-- Oggetto - Indicare la descrizione del documento. -->
+		<Oggetto>Descrizione del documento</Oggetto>
+	</ChiaveDescrittiva>
+	<Allegati>
+		<!-- NumeroAllegati - Indicare il numero di allegati associati al Registro di Tracciabilità dei Rifiuti. - Non obbligatori -->
+		<NumeroAllegati>2</NumeroAllegati>
+		<IndiceAllegati>
+			<IdDoc>
+				<ImprontaCrittograficaDelDocumento>
+					<Impronta>Hash SHA-256 del file relativo al documento allegato</Impronta>
+					<Algoritmo>SHA-256</Algoritmo>
+				</ImprontaCrittograficaDelDocumento>
+				<Identificativo>Nome del file relativo al documento allegato</Identificativo>
+			</IdDoc>
+			<Descrizione>Allegato</Descrizione>
+		</IndiceAllegati>
+		<IndiceAllegati>
+			<IdDoc>
+				<ImprontaCrittograficaDelDocumento>
+					<Impronta>Hash SHA-256 del file relativo al documento allegato</Impronta>
+					<Algoritmo>SHA-256</Algoritmo>
+				</ImprontaCrittograficaDelDocumento>
+				<Identificativo>Nome del file relativo al documento allegato</Identificativo>
+			</IdDoc>
+			<Descrizione>Allegato</Descrizione>
+		</IndiceAllegati>
+	</Allegati>
+	<Riservato>true/false</Riservato>
+	<IdentificativoDelFormato>
+		<Formato>Mime type del file relativo al documento versato in conservazione</Formato>
+	</IdentificativoDelFormato>
+	<Verifica>
+		<!-- FirmatoDigitalmente - Indicare <true> se al documento informatico è associata una firma digitale. -->
+		<FirmatoDigitalmente>true/false</FirmatoDigitalmente>
+		<!-- SigillatoElettronicamente - Indicare <true> se al documento informatico è associato un sigillo elettronico semplice, un sigillo elettronico avanzato, oppure un sigillo digitale. -->
+		<SigillatoElettronicamente>true/false</SigillatoElettronicamente>
+		<!-- MarcaturaTemporale - Indicare <true> se al documento informatico è associata una marca temporale. -->
+		<MarcaturaTemporale>true/false</MarcaturaTemporale>
+		<!-- ConformitaCopieImmagineSuSupportoInformatico - Indicare <true> se esiste l’attestazione di conformità o il rapporto di verificazione della copia per immagine su supporto informatico del documento analogico assicurata previo raffronto dei documenti o attraverso certificazione di processo svolta da un privato, un notaio o un pubblico ufficiale. Indicare <false> se non esiste l’attestazione di conformità o il rapporto di verificazione. -->
+		<ConformitaCopieImmagineSuSupportoInformatico>true/false</ConformitaCopieImmagineSuSupportoInformatico>
+	</Verifica>
+	<!-- NomeDelDocumento : Indicare il nome del file (comprensivo di estensione) relativo al documento versato in conservazione. -->
+	<NomeDelDocumento>Nome del file relativo al documento versato in conservazione</NomeDelDocumento>
+	<VersioneDelDocumento>1</VersioneDelDocumento>
+	<CustomMetadata>
+		<!-- CustomerGroupId : Indicare la partita IVA (senza il codice paese, es. 02780480964) della società che versa il documento nel sistema di conservazione. -->
+		<CustomerGroupId>Partita IVA/Codice fiscale della società che versa il documento nel sistema di conservazione</CustomerGroupId>
+	</CustomMetadata>
+</DocumentoInformatico>
